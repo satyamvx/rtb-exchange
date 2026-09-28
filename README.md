@@ -22,8 +22,3 @@ request -> filter (budget + frequency cap) -> parallel bids (60 ms timeout) -> s
 | in-memory `analytics` | ClickHouse table fed by a Kafka consumer |
 | in-process mock bidders | separate HTTP services |
 
-## Interview talking points
-- Why second-price? Encourages truthful bidding.
-- Why atomic reserve? Concurrent requests must never overspend a budget.
-- Why a bid timeout? Slow bidders must not break the latency budget.
-- Why dedup clicks? Fraud and double-counted spend.
