@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: rtb-exchange
+    runtime: docker
+    healthCheckPath: /health
+    plan: free
